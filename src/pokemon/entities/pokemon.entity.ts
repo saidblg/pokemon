@@ -1,17 +1,15 @@
+// pokemon.entity.ts
 import {
   Entity,
   Column,
   PrimaryGeneratedColumn,
-  CreateDateColumn,
-  UpdateDateColumn,
-  DeleteDateColumn,
 } from 'typeorm';
 import { PokemonAbstract } from './abstract-pokemon.entity';
 
 @Entity()
 export class Pokemon extends PokemonAbstract {
   @PrimaryGeneratedColumn('uuid')
-  id: string;
+  id: number;
 
   @Column()
   name: string;
@@ -20,7 +18,7 @@ export class Pokemon extends PokemonAbstract {
   type: string;
 
   @Column({ nullable: true })
-  category: number;
+  category: string;
 
   @Column()
   weight: number;
@@ -33,13 +31,4 @@ export class Pokemon extends PokemonAbstract {
 
   @Column()
   cost: number;
-
-  @CreateDateColumn()
-  created_at: Date;
-
-  @UpdateDateColumn()
-  updated_at: Date;
-
-  @DeleteDateColumn({ nullable: true, default: null })
-  deleted_at: Date;
 }
