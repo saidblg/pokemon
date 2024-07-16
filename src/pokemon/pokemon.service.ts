@@ -22,12 +22,7 @@ export class PokemonService {
     
     let data;
     let pokemon;
-    //Environment API_ENDPOINTini almaya çalış alamazsan değişkeni burada sabit ata
-    let api = this.configService.get<string>('API_ENDPOINT') ;
-    console.log('url:',api);
-    if (!api) {
-     api='https://pokeapi.co/api/v2/pokemon/';
-    }
+    let api;
     //
     try {
       const response = await axios.get(

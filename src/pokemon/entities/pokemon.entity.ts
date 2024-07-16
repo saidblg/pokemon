@@ -9,7 +9,7 @@ import { PokemonAbstract } from './abstract-pokemon.entity';
 @Entity()
 export class Pokemon extends PokemonAbstract {
   @PrimaryGeneratedColumn('uuid')
-  id: number;
+  id: string;
 
   @Column()
   name: string;

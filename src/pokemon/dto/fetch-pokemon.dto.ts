@@ -1,5 +1,5 @@
 export class FetchPokemonDto {
-  id: number;
+  id: string;
   type: string;
   category: string;
   }
