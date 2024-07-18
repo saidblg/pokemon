@@ -1,9 +1,4 @@
-// pokemon.entity.ts
-import {
-  Entity,
-  Column,
-  PrimaryGeneratedColumn,
-} from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 import { PokemonAbstract } from './abstract-pokemon.entity';
 
 @Entity()

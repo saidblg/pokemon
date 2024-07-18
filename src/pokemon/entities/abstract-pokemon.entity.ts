@@ -1,8 +1,6 @@
-// abstract-pokemon.entity.ts
-import { Column, CreateDateColumn, UpdateDateColumn, DeleteDateColumn } from 'typeorm';
+import { CreateDateColumn, UpdateDateColumn, DeleteDateColumn } from 'typeorm';
 
 export abstract class PokemonAbstract {
-
   @CreateDateColumn()
   created_at: Date;
 
